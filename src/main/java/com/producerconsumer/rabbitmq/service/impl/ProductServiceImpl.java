@@ -50,6 +50,11 @@ public class ProductServiceImpl implements ProductService {
         return toDto(product);
     }
 
+    @Override
+    public void invalidExchange() {
+        productPublisher.invalidExchange(new Product());
+    }
+
     private Product toEntity(ProductDto productDto) {
         return Product.builder()
                 .id(productDto.id())

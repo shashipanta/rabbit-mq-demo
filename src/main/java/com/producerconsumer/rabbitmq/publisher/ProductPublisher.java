@@ -27,4 +27,8 @@ public class ProductPublisher {
     public void updateProduct(Product product) {
         rabbitTemplate.convertAndSend(PRODUCT_EXCHANGE, PRODUCT_ROUTING_KEY, product);
     }
+
+    public void invalidExchange(Object o) {
+        rabbitTemplate.convertAndSend("invalid-exchange", "invalid-routing-key", o);
+    }
 }

@@ -14,4 +14,6 @@ public interface ProductService {
     ProductDto update(Long productId, ProductDto productDto);
 
     ProductDto view(Long productId);
+
+    void invalidExchange();
 }

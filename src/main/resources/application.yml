@@ -11,4 +11,4 @@ spring:
     password: postgres
     url: jdbc:postgresql://172.21.0.2:5432/products_db
     driver-class-name: org.postgresql.Driver
-
+debug: true
