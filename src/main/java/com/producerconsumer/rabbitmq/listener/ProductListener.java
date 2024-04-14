@@ -32,8 +32,6 @@ public class ProductListener {
         log.info("Product registered : {}", product);
         if (product == null)
             channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
-
-
         productViewService.create(product);
     }
 
